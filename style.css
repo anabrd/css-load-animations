@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto',
     sans-serif;
     text-align: center;
+    height: 100vh;
 }
 
 h1 {
@@ -23,150 +24,7 @@ section {
     margin-bottom: 10vh;
 }
 
-.coffee-wrapper {
-    width: 20%;
-    margin: 2% auto;
-    position: relative;
-    height: 20vw;
-}
-
-.dzezva {
-    width: 50%;
-    position: absolute;
-    top: 30%;
-    left: 32%;
-    animation: dzezva 2s linear 1, bounce 2s linear 9;
-}
-
-p {
-    margin-top: 5%;
-}
-
-p:before {
-    content: '';
-    opacity: 0;
-    animation: text 25s linear 1;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes text {
-    10% {
-        content: 'Heating up water...';
-        opacity: 1;
-    }
-
-    30% {
-        content: 'Adding coffee...';
-         opacity: 1;
-    }
-
-    50% {
-        content: 'Brewing...';
-        opacity: 1;
-    }
-
-    100% {
-        content: 'Done!';
-        opacity: 1;
-    }
-}
-
-.flame {
-    width: 30%;
-    position: absolute;
-    bottom: -15%;
-    left: 32%;
-    animation: flame 18s steps(2) 1;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes flame {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    100% {
-        visibility: hidden;
-    }
-}
-
-@keyframes dzezva {
-    0% {
-        top: 0%;
-        opacity: 0;
-    }
-
-    100% {
-        top: 30%;
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0% {
-        top: 30%;
-    }
-
-    50% {
-        transform: translateY(15%);
-    }
-
-    100% {
-    top: 30%;
-    }
-
-}
-
-@keyframes spoon {
-    0% {
-        opacity: 0;
-        transform: translateX(-50vw);
-
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateX(-20vw);
-    }
-
-    100% {
-        transform: rotateZ(45deg);
-    }
-}
-
-.spoon {
-    width: 8%;
-    animation: spoon 2s linear 3;
-    transform: rotateZ(180deg);
-    animation-delay: 5s;
-    opacity: 0;
-}
-
-.warm {
-    width: 20%;
-    position: absolute;
-    top: 0;
-    left: 36%;
-    opacity: 0;
-    animation: warm 18s linear 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes warm {
-
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+/******* GEOMETRIC STYLING ******/
 
 #geometric {
     display: flex;
@@ -281,3 +139,177 @@ p:before {
     }
 
 }
+
+/******* GEOMETRIC STYLING END ******/
+
+
+/******* COFFEE LOADER START ******/
+
+.coffee-wrapper {
+    width: 20%;
+    margin: 2% auto;
+    position: relative;
+    height: 19vw;
+}
+
+/* TEXT STYLING AND ANIMATION START */
+
+p {
+    margin-top: 5%;
+}
+
+p:before {
+    content: '';
+    opacity: 0;
+    animation: text 25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text {
+    10% {
+        content: 'Heating up water...';
+        opacity: 1;
+    }
+
+    30% {
+        content: 'Adding coffee...';
+        opacity: 1;
+    }
+
+    60% {
+        content: 'Brewing...';
+        opacity: 1;
+    }
+
+    100% {
+        content: 'Done!';
+        opacity: 1;
+    }
+}
+
+/* TEXT STYLING AND ANIMATION START */
+
+/* FLAME STYLE AND ANIMATION START */
+
+.flame {
+    width: 25%;
+    position: absolute;
+    bottom: -5%;
+    left: 36%;
+    animation: flame 18s steps(2) 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes flame {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+
+/* FLAME STYLE AND ANIMATION END */
+
+
+/* DZEZVA STYLE AND ANIMATION START */
+
+.dzezva {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    animation: dzezva 2s linear 1, bounce 2s linear 9;
+}
+
+@keyframes dzezva {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 30%;
+    }
+
+    50% {
+        transform: translateY(15%);
+    }
+
+    100% {
+        top: 30%;
+    }
+
+}
+
+/* DZEZVA STYLE AND ANIMATION END */
+
+
+/* SPOON STYLE AND ANIMATION START */
+
+.spoon {
+    width: 5%;
+    animation: spoon 2s linear 3;
+    transform: rotateZ(180deg);
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+@keyframes spoon {
+    0% {
+        opacity: 0;
+        transform: translateX(-50vw);
+
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-20vw);
+    }
+
+    100% {
+        transform: rotateZ(45deg);
+    }
+}
+
+/* SPOON STYLE AND ANIMATION END */
+
+
+/* WARM STYLE AND ANIMATION START */
+
+.warm {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 38%;
+    opacity: 0;
+    animation: warm 18s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes warm {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* WARM STYLE AND ANIMATION STYLE */
+
