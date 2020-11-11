@@ -1,0 +1,283 @@
+body {
+    font-family: 'Roboto',
+    sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins',
+    sans-serif;
+    color: #28025a;
+}
+
+h2 {
+    min-width: 100%;
+
+}
+
+h3 {
+    font-size: 2vw;
+}
+
+section {
+    margin-bottom: 10vh;
+}
+
+.coffee-wrapper {
+    width: 20%;
+    margin: 2% auto;
+    position: relative;
+    height: 20vw;
+}
+
+.dzezva {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    animation: dzezva 2s linear 1, bounce 2s linear 9;
+}
+
+p {
+    margin-top: 5%;
+}
+
+p:before {
+    content: '';
+    opacity: 0;
+    animation: text 25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes text {
+    10% {
+        content: 'Heating up water...';
+        opacity: 1;
+    }
+
+    30% {
+        content: 'Adding coffee...';
+         opacity: 1;
+    }
+
+    50% {
+        content: 'Brewing...';
+        opacity: 1;
+    }
+
+    100% {
+        content: 'Done!';
+        opacity: 1;
+    }
+}
+
+.flame {
+    width: 30%;
+    position: absolute;
+    bottom: -15%;
+    left: 32%;
+    animation: flame 18s steps(2) 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes flame {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes dzezva {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 30%;
+    }
+
+    50% {
+        transform: translateY(15%);
+    }
+
+    100% {
+    top: 30%;
+    }
+
+}
+
+@keyframes spoon {
+    0% {
+        opacity: 0;
+        transform: translateX(-50vw);
+
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-20vw);
+    }
+
+    100% {
+        transform: rotateZ(45deg);
+    }
+}
+
+.spoon {
+    width: 8%;
+    animation: spoon 2s linear 3;
+    transform: rotateZ(180deg);
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+.warm {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 36%;
+    opacity: 0;
+    animation: warm 18s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes warm {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#geometric {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.square-wrapper {
+    position: relative;
+    width: 10vw;
+    margin: auto;
+}
+
+.shape {
+    width: 100%;
+}
+
+.triangle {
+    transform: rotateZ(-0.5deg);
+}
+
+
+.dot-square {
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    width: 3vw;
+    animation: square 2s linear infinite;
+}
+
+.dot-circle {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 3vw;
+    animation: circle 2s linear infinite;
+}
+
+.dot-triangle {
+    position: absolute;
+    top: -10%;
+    left: 35%;
+    width: 3vw;
+    animation: triangle 2s linear infinite;
+}
+
+@keyframes square {
+    0% {
+        left: -8%;
+        top: -8%;
+        transform: translate(-8%, 8%);
+    }
+
+    28% {
+        left: -8%;
+        top: 105%;
+        transform: translate(8%, -105%);
+    }
+
+    50% {
+        left: 110%;
+        top: 105%;
+        transform: translate(-105%, -105%);
+    }
+
+    78% {
+        left: 110%;
+        top: -8%;
+        transform: translate(-105%, -8%);
+    }
+
+    100% {
+        left: -8%;
+        top: -8%;
+        transform: translate(-8%, 8%);
+    }
+}
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg) translateX(145%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(145%) rotate(-360deg);
+    }
+}
+
+@keyframes triangle {
+    0% {
+        left: 38%;
+        top: -10%;
+        transform: translate(-38%, -10%);
+    }
+
+    33% {
+        left: -15%;
+        top: 105%;
+        transform: translate(15%, -105%);
+    }
+
+    66% {
+        left: 115%;
+        top: 105%;
+        transform: translate(-110%, -110%);
+    }
+
+    100% {
+        left: 40%;
+        top: -10%;
+        transform: translate(-40%, -10%);
+    }
+
+}
